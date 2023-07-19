@@ -410,7 +410,7 @@ if __name__ == "__main__":
                                  max_epochs=args.epochs)
 
         print("Training: {}".format(output_model_name))
-        trainer.fit(model=task, train_dataloader=dataloaders['train'], val_dataloaders=dataloaders['dev'])
+        trainer.fit(model=task, train_dataloaders=dataloaders['train'], val_dataloaders=dataloaders['dev'])
 
         for _ckpt in range(len(trainer.checkpoint_callbacks)):
             logging.info("Testing")
